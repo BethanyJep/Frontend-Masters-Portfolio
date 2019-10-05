@@ -6,6 +6,9 @@ body{
     line-height: 1.7rem;
     width: 100%;
 }
+h2{
+    margin: 15px 20%;
+}
 .header {
     background-color: #111d4a;
     color: #c2cae8;
