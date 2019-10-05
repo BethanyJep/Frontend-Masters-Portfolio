@@ -31,8 +31,8 @@ h2{
     justify-content: center;
     background: url('../images/photo1.jpg');
     background-size: cover;
-    height: 70vh;
-    width: 100vw;
+    height: auto;
+    max-width: 100vw;
     /* color: #ffffff; */
     margin: auto;
     /* margin-top: 0%; */
@@ -56,7 +56,7 @@ a:hover{
     color: #444;
 }
 .container{
-    width: 90%;
+    max-width: 90%;
     margin: 10px 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -67,8 +67,8 @@ a:hover{
     background-color: #111d4a;
 }
 .card img{ 
-    width: 30vw;
-    height: 50vh;
+    width: 100%;
+    height: auto;
 }
 .card p{
     color: #c2cae8;
