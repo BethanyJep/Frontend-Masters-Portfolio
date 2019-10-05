@@ -12,6 +12,7 @@ body{
     display: inline-block;
     position: relative;
     width: 100%;
+    margin-bottom: 0px;
 }
 .heading{
     float: left;
@@ -19,7 +20,28 @@ body{
 }
 .nav {
     float: right;
-    margin: 1.8em;
+    margin: 1.8em 1.8em 0em 1.8em;
+}
+.content {
+    /* width: 80%; */
+    display: grid;
+    justify-content: center;
+    background: url('/images/code.jpg') no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100vw;
+    color: #ffffff;
+    margin: auto;
+}
+.content h1{
+    margin-top: 50%;
+    font-size: 3em;
+    color: #ffffff;
+}
+.content p{
+    color: #fff;
+    line-height: 2.5rem;
+    font-size: 2em;
 }
 a{
     text-decoration: none;
@@ -28,6 +50,25 @@ a{
 }
 a:hover{
     color: #444;
+}
+.container{
+    width: 90%;
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.card{
+    margin: 0px 20px;
+    background-color: #111d4a;
+}
+.card img{ 
+    width: 30vw;
+    height: 50vh;
+}
+.card p{
+    color: #c2cae8;
+    margin-left: 15px;
 }
 .aside{
     max-width: 100%;
@@ -50,7 +91,7 @@ ul{
     background-color: #111d4a;
     color: #c2cae8;
     bottom: 0;
-    padding: 10px;
+    padding: 10px 0px;
     /* position:fixed; */
     width: 100%;
 }
@@ -61,9 +102,8 @@ ul{
 .aside-image{
     float: left;
     margin: 20px 20px 20px 20px;
-
 }
-img{
+.aside-image img{
     width: 500px;
     max-width: 100%;
 }
@@ -80,10 +120,10 @@ img{
     background-color: #c2cae8;
 }
 input[type=text],input[type=email]{ 
-    width: 90%;
+    width: 80%;
     height: 30px;
     display: block;
-    margin: 20px;
+    margin: 20px auto;
     border: none;
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -91,9 +131,9 @@ input[type=text],input[type=email]{
     /* border-radius: 5px; */
 }
 textarea{
-    width: 90%;
     display: block;
-    margin: 20px; 
+    margin: 20px auto;
+    width: 80%; 
     border: none;
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -108,7 +148,7 @@ input[type=button]{
     color: #c2cae8;
     border-radius: 20px;
     border: none;
-    /* margin-right:20px; */
+    margin-right:auto;
     width: 100px; 
     padding: 10px;
 }
