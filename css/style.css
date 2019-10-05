@@ -29,7 +29,7 @@ h2{
 .content {
     display: grid;
     justify-content: center;
-    background: url('/images/code.jpg');
+    background: url('/images/photo1.jpg');
     background-size: cover;
     height: 70vh;
     width: 100vw;
