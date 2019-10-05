@@ -10,39 +10,41 @@ h2{
     margin: 8px 20%;
 }
 .header {
-    display: inline-block;
+    display: inline-grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     background-color: #111d4a;
     color: #c2cae8;
-    /* padding: 0%; */
-    /* position: relative; */
     width: 100%;
-    /* margin-bottom: 0px; */
+    padding: 10px;
 }
 .heading{
-    float: left;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 .nav {
-    float: right;
-    margin: 1.8em 1.8em 0em 1.8em;
+    margin: 1.5em 0em 0em 0.8em;
 }
 .content {
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     background: url('../images/photo1.jpg');
     background-size: cover;
-    height: auto;
+    height: 100%;
     max-width: 100vw;
     /* color: #ffffff; */
     margin: auto;
     /* margin-top: 0%; */
 }
 .content h1{
-    margin-top: 40%;
+    display: grid;
+    justify-content: center;
+    margin-top: 10%;
     font-size: 3em;
     color: #ffffff;
 }
 .content p{
+    display: grid;
+    justify-content: center;
+    text-align: center;
     color: #fff;
     line-height: 2.5rem;
     font-size: 2em;
@@ -56,14 +58,14 @@ a:hover{
     color: #444;
 }
 .container{
-    max-width: 90%;
-    margin: 10px 0px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    margin: 10px 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
 
 }
-.card{
-    margin: 0px 20px;
+.card{   
+    display: inline-block;
     background-color: #111d4a;
 }
 .card img{ 
@@ -72,7 +74,7 @@ a:hover{
 }
 .card p{
     color: #c2cae8;
-    margin-left: 15px;
+    padding: 8px;
 }
 .aside{
     max-width: 100%;
@@ -86,7 +88,7 @@ a:hover{
 }
 ul{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .section{
     text-align: center;
@@ -112,11 +114,12 @@ ul{
     max-width: 100%;
 }
 .article img{
-    align-items: center;
-    width: 40%;
+    display: inline;
+    /* align-items: center; */
+    /* width: 48%; */
     max-width: 100%;
-    height: auto;
-    margin: 0px 50px 0px 30px;
+    /* height: auto; */
+    /* margin: 0px 50px 0px 30px; */
 }
 .form{
     margin: 20px;
