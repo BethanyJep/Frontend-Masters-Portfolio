@@ -10,12 +10,13 @@ h2{
     margin: 8px 20%;
 }
 .header {
+    display: inline-block;
     background-color: #111d4a;
     color: #c2cae8;
-    display: inline-block;
-    position: relative;
+    /* padding: 0%; */
+    /* position: relative; */
     width: 100%;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
 }
 .heading{
     float: left;
@@ -26,18 +27,18 @@ h2{
     margin: 1.8em 1.8em 0em 1.8em;
 }
 .content {
-    /* width: 80%; */
     display: grid;
     justify-content: center;
-    background: url('/images/code.jpg') no-repeat;
+    background: url('/images/code.jpg');
     background-size: cover;
     height: 70vh;
     width: 100vw;
-    color: #ffffff;
+    /* color: #ffffff; */
     margin: auto;
+    /* margin-top: 0%; */
 }
 .content h1{
-    margin-top: 50%;
+    margin-top: 40%;
     font-size: 3em;
     color: #ffffff;
 }
