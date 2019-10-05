@@ -15,7 +15,9 @@ h2{
     background-color: #111d4a;
     color: #c2cae8;
     width: 100%;
-    padding: 10px;
+}
+.heading{
+    margin-left: 10px;
 }
 .nav {
     margin: 1.5em 0em 0em 0.8em;
