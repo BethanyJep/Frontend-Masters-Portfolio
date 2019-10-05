@@ -59,6 +59,7 @@ a:hover{
 .container{
     display: grid;
     margin: 10px 10px;
+    text-align: center;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1em;
 
