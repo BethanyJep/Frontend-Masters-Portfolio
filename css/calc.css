@@ -29,9 +29,21 @@ button{
     background: none;
     border: none;
 }
-.func:hover{
+.square{
+    background-color: #d8d9db;
+}
+.square:hover{
     background-color: #ebebeb;
+}
+.square:active{
+    background-color: #bbbcbe;
 }
 .func{
     background-color:#df974c;
+}
+.func:hover{
+    background-color: #dfb07e;
+}
+.func:active{
+    background-color: #dd8d37;
 }
