@@ -23,11 +23,11 @@
 .item17{
     grid-column: 1 / 4; 
 }
-button{
+.func,.square{
     padding: 20px;
     width: inherit;
     background: none;
-    border: none;
+    /* border: none; */
 }
 .square{
     background-color: #d8d9db;
