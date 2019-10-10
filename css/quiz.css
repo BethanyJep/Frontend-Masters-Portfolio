@@ -7,3 +7,33 @@ body{
     width: 100%;
     overflow: none;
 }
+.btn{
+  display: grid;
+  justify-content: center;
+}
+.btn p {
+  background-color: salmon;
+  color: white;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.container{
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px 100px 100px 100px; */
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* grid-template: repeat(2, 80px) / repeat(3, 80px); */
+  grid-template-areas:
+
+    "h h h h"
+
+    "a a a a"
+
+    "b b b b"
+
+    "f f f f"
+
+    ;
+  /* grid-template: repeat(3, 80px) / repeat(2, 80px); */
+}
