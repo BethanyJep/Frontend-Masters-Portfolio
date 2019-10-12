@@ -7,33 +7,38 @@ body{
     width: 100%;
     overflow: none;
 }
-.btn{
-  display: grid;
+.container{
+  display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
-.btn p {
-  background-color: salmon;
+input{
+  background-color: skyblue;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: none;
+  border-bottom-style: ridge;
+  border-bottom-color: rgb(60, 6, 255);
+}
+span{
+  font-weight: bold;
+}
+#button {
+  display: block;
+  margin: 20px auto;
+  background-color: rgb(60, 6, 255);
+  border: none;
   color: white;
   width: 100px;
   text-align: center;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 5px;;
 }
-.container{
-  display: grid;
-  /* grid-template-columns: 100px 100px 100px 100px 100px 100px; */
-  /* grid-template-rows: repeat(3, 1fr); */
-  /* grid-template: repeat(2, 80px) / repeat(3, 80px); */
-  grid-template-areas:
-
-    "h h h h"
-
-    "a a a a"
-
-    "b b b b"
-
-    "f f f f"
-
-    ;
-  /* grid-template: repeat(3, 80px) / repeat(2, 80px); */
+.question{  
+  margin-top: 20px;
+  background-color: skyblue;
+  padding: 10px;
+  box-shadow: 6px 6px 6px #555;
+  padding: 5%;
 }
