@@ -21,12 +21,19 @@ function tranquil(userAnswer) {
     return isCorrect
 }
 function planet(userAnswer) {
-    // Name the largest freshwater lake in the world?
-    // 100points
     const isCorrect = userAnswer === 'Uranus';
 
     if (isCorrect) {
         points += 100
+    }
+    return isCorrect
+}
+
+function uppercase(userAnswer, word) {
+    const isCorrect = userAnswer == word.toUpperCase();
+
+    if (isCorrect) {
+        points += 200
     }
     return isCorrect
 }
@@ -47,15 +54,6 @@ function cubed(userAnswer, number) {
     }
     return isCorrect
 }
-function uppercase(userAnswer, word) {
-    // Name the largest freshwater lake in the world?
-    const isCorrect = userAnswer == word.toUpperCase();
-
-    if (isCorrect) {
-        points += 100
-    }
-    return isCorrect
-}
 
 function multiplication(userAnswer, num1, num2) {
     // Name the largest freshwater lake in the world?
@@ -66,7 +64,7 @@ function multiplication(userAnswer, num1, num2) {
     }
     return isCorrect
 }
-function getResult() {
+function getScore() {
     return points;
 }
 
@@ -140,17 +138,17 @@ function getResult() {
    const process = [
       {
         question: 'Name the largest freshwater lake in the world?',
-        answer: 'Lake Superior',
+        validator: lake,
         points: 100
       },
       {
         question: 'Where would you find the Sea of Tranquility?',
-        answer: 'The Moon',
+        validator: tranquil,
          points: 100
         },
         {
             question: 'Name the seventh planet from the sun.',
-            answer: 'Uranus',
+            validator: planet,
             points: 100
         },
         {
