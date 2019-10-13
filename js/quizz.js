@@ -109,9 +109,9 @@ function getScore() {
     let response = "";
 
     if (answer === true) {
-      response = "correct!";
+      response = "correct!", 'Hooray';
     } else if (answer === false) {
-      response = "incorrect :(";
+      response = "incorrect :(", 'Try your luck next time!';
     } else {
       response = "got a response other than true or false";
     }
@@ -120,7 +120,7 @@ function getScore() {
     currentQuestion++;
     
     if (currentQuestion >= process.length) {
-      document.getElementById("container").innerHTML = `<h1>Congrats! You finished. You got ${getScore()} points!</h1>`;
+      document.getElementById("container").innerHTML = `<h1>Congrats!</h1> <h1>You finished.</h1> <h1>You got ${getScore()} points!</h1>`;
       return;
     }
     
