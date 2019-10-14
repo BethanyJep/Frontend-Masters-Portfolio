@@ -68,7 +68,7 @@ function getScore() {
     return points;
 }
 
-(function() {
+(function initQuiz() {
   const words = [
     "squeeze",
     "suspend",
@@ -178,11 +178,19 @@ function getScore() {
     ];
 
   const input = document.getElementById("input");
+
   document.getElementById("form").addEventListener("submit", e => {
     e.preventDefault();
     validate(input.value);
     input.value = "";
   });
+
+  document.getElementById('button').addEventListener('onclick', e => {
+    e.preventDefault();
+    validate(input.value);
+    input.value = "";
+  });
+
 })();
 
 
