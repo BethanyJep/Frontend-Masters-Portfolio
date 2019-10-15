@@ -185,11 +185,11 @@ function getScore() {
     input.value = "";
   });
 
-  document.getElementById('button').addEventListener('onclick', e => {
-    e.preventDefault();
-    validate(input.value);
-    input.value = "";
-  });
+  // document.getElementById('button').addEventListener('submit', e => {
+  //   e.preventDefault();
+  //   validate(input.value);
+  //   input.value = "";
+  // });
 
 })();
 
