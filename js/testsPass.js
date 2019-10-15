@@ -12,9 +12,14 @@ function addTwoToEveryNumberInTheList (list) {
 
 function findLargestNumber(list) {
   // return the largest number in array
-    
+  let largest = list[0];
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] > largest) {
+      largest = list[i];
+    }
+  }
 
-  return 0;
+  return largest;
 }
 
 function makeDogObject() {
@@ -23,36 +28,68 @@ function makeDogObject() {
   //   has a name property of "Fido"
   //   has a color property of "white"
   //   has an age property of 6
+  return {
+    speak() {
+      return 'woof';
+    },
+    name: 'Fido',
+    color: 'white',
+    age: 6,
+  };
+};
 
-  return {};
-}
 
 function getListOfNames(list) {
   // list is an array of objects that looks like this
   // { name: "Some Person", jobTitle: "Boss Person", age: 30 }
-  // return a list of all the workers' names
-
-  return ["Bobby Baratheon", "Jonny Snow", "Dani Targaryen"];
+  // return a list of all the workers' names  
+  const names = [];
+  for (let i = 0; i < list.length; i++) {
+    names.push(list[i].name);
+  }
+  return names;
 }
 
 function getAverageAge(list) {
   // using the same list as above, get the average age of all the workers'
+  let sum = 0;
 
-  return 15;
+  for (let i = 0; i < list.length; i++) {
+    sum += list[i].age;
+  }
+
+  return sum / list.length;
 }
 
 function getAllEngineers(list) {
   // using the same list as above, return a list of all people who have the word "Engineer" in their jobTitle
+  const names = []
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].jobTitle.includes("Engineer")) {
+      names.push(list[i].name);
+    }
+  }
 
-  return ["Altaïr", "Ezio", "Connor", "Bayek", "Alexios"];
+  return names;
 }
 
 function sort(list) {
   // sort a list of numbers into ascending order
   // if you need more help, Google how to do bubble sort
   // you can sort, if you want to write it by hand, use bubble sort or insertion sort
-
-  return [1, 2, 3, 4];
+let swapped = true;
+  while (swapped) {
+    swapped = false;
+    for (let i = 0; i < list.length; i++) {
+      if (list[i] > list[i + 1]) {
+        const temp = list[i];
+        list[i] = list[i + 1];
+        list[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  }
+  return list;
 }
 
 // unit tests
