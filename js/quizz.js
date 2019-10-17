@@ -111,14 +111,12 @@ function getScore() {
     if (answer === true) {
       response = "Hooray! You got it right";
     } else if (answer === false) {
-      alert(function JSalert() {
-        swal("A Basic JS alert by a plug-in");
-      })
+      response = "Uh Oh! Try Again :(";
     } else {
       response = "got a response other than true or false";
     }
 
-    // alert(response);
+    alert(response);
     currentQuestion++;
     
     if (currentQuestion >= process.length) {
