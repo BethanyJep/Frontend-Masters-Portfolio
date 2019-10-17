@@ -3,7 +3,7 @@ let points = 0;
 function lake(userAnswer) {
     // Name the largest freshwater lake in the world?
     // 100points
-    const isCorrect = userAnswer === 'Lake Superior';
+    const isCorrect = userAnswer == 'Lake Superior';
 
     if (isCorrect) {
         points += 100
@@ -13,7 +13,7 @@ function lake(userAnswer) {
 function tranquil(userAnswer) {
     // Name the largest freshwater lake in the world?
     // 100points
-    const isCorrect = userAnswer === 'The Moon';
+    const isCorrect = userAnswer == 'The Moon';
 
     if (isCorrect) {
         points += 100
@@ -21,7 +21,7 @@ function tranquil(userAnswer) {
     return isCorrect
 }
 function planet(userAnswer) {
-    const isCorrect = userAnswer === 'Uranus';
+    const isCorrect = userAnswer == 'Uranus';
 
     if (isCorrect) {
         points += 100
@@ -47,7 +47,7 @@ function firstFourLetters(userAnswer, word) {
 }
 function cubed(userAnswer, number) {
     // Name the largest freshwater lake in the world?
-    const isCorrect = userAnswer === number ** 3;
+    const isCorrect = userAnswer == number ** 3;
 
     if (isCorrect) {
         points += 200
@@ -57,7 +57,7 @@ function cubed(userAnswer, number) {
 
 function multiplication(userAnswer, num1, num2) {
     // Name the largest freshwater lake in the world?
-    const isCorrect = userAnswer === num1 * num2;
+    const isCorrect = userAnswer ==     num1 * num2;
 
     if (isCorrect) {
         points += 300
@@ -109,14 +109,16 @@ function getScore() {
     let response = "";
 
     if (answer === true) {
-      response = "correct!", 'Hooray';
+      response = "Hooray! You got it right";
     } else if (answer === false) {
-      response = "incorrect :(", 'Try your luck next time!';
+      alert(function JSalert() {
+        swal("A Basic JS alert by a plug-in");
+      })
     } else {
       response = "got a response other than true or false";
     }
 
-    alert(response);
+    // alert(response);
     currentQuestion++;
     
     if (currentQuestion >= process.length) {
@@ -185,11 +187,11 @@ function getScore() {
     input.value = "";
   });
 
-  // document.getElementById('button').addEventListener('submit', e => {
-  //   e.preventDefault();
-  //   validate(input.value);
-  //   input.value = "";
-  // });
+  document.getElementById('button').addEventListener('click', e => {
+    e.preventDefault();
+    validate(input.value);
+    input.value = "";
+  });
 
 })();
 

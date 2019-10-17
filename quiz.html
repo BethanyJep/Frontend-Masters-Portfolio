@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/quiz.css" />
+    <link rel="stylesheet" href="alert/dist/sweetalert.css" />
     <title>Quiz Game</title>
   </head>
   <body>
@@ -12,11 +13,13 @@
       <div class="question">
         <form action="" id="form">
           <label for="input">
-            <span id="text">Name the largest freshwater lake in the world</span>
+            <span id="text"
+              >Name the largest freshwater lake in the world.</span
+            >
             <input id="input" placeholder="Answer" />
           </label>
         </form>
-        <button id="button" type="submit">guess</button>
+        <button id="button" type="submit" onclick="JSalert()">guess</button>
       </div>
     </div>
     <script src="js/quizz.js"></script>
