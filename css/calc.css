@@ -25,7 +25,7 @@
     grid-column: 1 / 4; 
 }
 .func,.square{
-    padding: 20px;
+    padding: 15px;
     width: inherit;
     background: none;
     /* border: none; */
@@ -47,4 +47,9 @@
 }
 .func:active{
     background-color: #dd8d37;
+}
+button{
+    border: none;
+    color: none;
+    background-color: none;
 }
