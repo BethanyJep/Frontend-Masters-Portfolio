@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 body{
     font-family: 'Montserrat', sans-serif;
-}#button {
-  margin: 15px ;
+    text-align: center;
+}
+h1{
+  text-align: center;
+  color: #3e64ff;
+}
+.button {
+  margin: 10px ;
   font-size: 20px;
   background-color: #3e64ff;
   border: none;
@@ -11,4 +17,14 @@ body{
   padding: 7px 15px;
   border-radius: 25px;
   width: 100px;
+}
+.breed{
+  margin: 10px;
+}
+.breed input{
+  border-radius: 10px;
+  text-align: center;
+  border-color: #3e64ff;
+  padding: 9px;
+  text-transform: capitalize;   
 }
