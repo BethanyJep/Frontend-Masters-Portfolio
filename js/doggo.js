@@ -1,7 +1,7 @@
 const breedsUrl = "https://dog.ceo/api/breeds/image/random";
-const dog = document.querySelector(".dog")
-const breedList = "https://dog.ceo/api/breeds/list/all"
-const searchDogs = getElementById('search')
+const dog = document.querySelector(".dog");
+const breedList = "https://dog.ceo/api/breeds/list/all";
+const searchDogs = document.getElementById("search");
 
 function addNewDog() {
     const promise = fetch(breedsUrl);
@@ -34,7 +34,7 @@ function searchBreed() {
         .then(function (processedResponse) {
             const searchDogs = getElementById('search')
             searchDogs.value = processedResponse.message;
-            
+
         })
         .then(function () {
             

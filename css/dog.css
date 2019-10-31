@@ -26,5 +26,6 @@ h1{
   text-align: center;
   border-color: #3e64ff;
   padding: 9px;
-  text-transform: capitalize;   
+  text-transform: capitalize; 
+  margin: 5px;  
 }
