@@ -1,7 +1,5 @@
 const breedsUrl = "https://dog.ceo/api/breeds/image/random";
 const dog = document.querySelector(".dog");
-const breedList = "https://dog.ceo/api/breeds/list/all";
-const searchDog = document.getElementById("search");
 
 function addNewDog() {
     const promise = fetch(breedsUrl);
@@ -21,27 +19,50 @@ function addNewDog() {
             dog.appendChild(img);
         })
 }
+
 let buttonOn = document.querySelector(".add-dog")
 buttonOn.addEventListener('click', addNewDog);
 
-function searchDogs() {
-    const promise = fetch(breedList);
-    promise
-        .then(function (response) {
-            const processingPromise = response.json()
-            return processingPromise;
-        })
-        .then(function () {
-            searchDogs.classList = processedResponse.message;
-            searchBreeds.src = "https://dog.ceo/api/breed/${searchDogs.value}/images/random";
-    })
+const breedImage = document.getElementById("breedImage");
+const loader = document.getElementById('loader');
+const dogBreed = document.getElementById('dogBreed');
+
+async function populateList() {
+    const res = await fetch("https://dog.ceo/api/breeds/list/all");
+    const resJson = await res.json();
+    
+    let breeds = "<option></option>";
+    let breedList = Object.keys(resJson.message);
+
+    for (let i = 0; i < breedList.length; i++) {
+        breeds += `<option value=${breedList[i]}>${breedList[i]}</option>`;
+    }
+    
+    dogBreed.innerHTML = breeds;
+    
+    const randomRes = await fetch("https://dog.ceo/api/breeds/image/random");
+    const randomResJson = await randomRes.json();
+
+    breedImage.src = randomResJson.message;
+
+    dogBreed.addEventListener("change", handleBreedChange);
+
+    breedImage.addEventListener("load", function () {
+        breedImage.classList.add("show");
+        loader.classList.remove("show");
+  });
 }
 
-searchDogs.addEventListener('keydown', searchDogs)
+async function handleBreedChange(event) {
+  const breed = event.target.value;
 
-// function loading() {
-//     const load = document.createElement("img")
-//     load.src = "images/load.gif";
-//     load.alt = "infity loading.io";
-//     return load;
-// }
+  breedImage.classList.remove("show");
+  loader.classList.add("show");
+
+  const res = await fetch(` https://dog.ceo/api/breed/${breed}/images/random`);
+  const resJson = await res.json();
+
+  breedImage.src = resJson.message;
+}
+
+populateList(); 
