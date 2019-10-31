@@ -1,7 +1,7 @@
 const breedsUrl = "https://dog.ceo/api/breeds/image/random";
 const dog = document.querySelector(".dog");
 const breedList = "https://dog.ceo/api/breeds/list/all";
-const searchDogs = document.getElementById("search");
+const searchDog = document.getElementById("search");
 
 function addNewDog() {
     const promise = fetch(breedsUrl);
@@ -37,7 +37,7 @@ function searchDogs() {
     })
 }
 
-searchDogs.addEventListener()
+searchDogs.addEventListener('keydown', searchDogs)
 
 // function loading() {
 //     const load = document.createElement("img")
