@@ -24,26 +24,24 @@ function addNewDog() {
 let buttonOn = document.querySelector(".add-dog")
 buttonOn.addEventListener('click', addNewDog);
 
-function searchBreed() {
+function searchDogs() {
     const promise = fetch(breedList);
     promise
-        .then(function (respond) {
-            const processPromise = respond.json()
-            return processPromise;
-        })
-        .then(function (processedResponse) {
-            const searchDogs = getElementById('search')
-            searchDogs.value = processedResponse.message;
-
+        .then(function (response) {
+            const processingPromise = response.json()
+            return processingPromise;
         })
         .then(function () {
-            
-        })
+            searchDogs.classList = processedResponse.message;
+            searchBreeds.src = "https://dog.ceo/api/breed/${searchDogs.value}/images/random";
+    })
 }
 
-function loading() {
-    const load = document.createElement("img")
-    load.src = "images/load.gif";
-    load.alt = "infity loading.io";
-    return load;
-}
+searchDogs.addEventListener()
+
+// function loading() {
+//     const load = document.createElement("img")
+//     load.src = "images/load.gif";
+//     load.alt = "infity loading.io";
+//     return load;
+// }
