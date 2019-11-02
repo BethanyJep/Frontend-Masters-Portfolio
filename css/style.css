@@ -174,27 +174,3 @@ input[type=button]{
     max-width: 900px;
     justify-content: right;
 } 
-.calc{
-    width: 300px;
-    margin:  40px; 
-}
-.item{
-    padding: 15px;
-    margin-bottom: 5px;
-    border: 2px solid #000;
-    background-color: #c2cae8;
-    height: 20px;
-    display: inline-block;
-}
-.square{
-    width: 30px;
-}
-.item1{
-    width: 242px;
-}
-.item2{
-    width: 132px;
-}
-.item17{
-    width: 172px;
-}
