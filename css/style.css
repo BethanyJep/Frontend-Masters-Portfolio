@@ -56,8 +56,11 @@ a{
     color: #c2cae8;
     padding: 0.5em;
 }
+.container a{
+    padding: inherit;
+}
 a:hover{
-    color: #444;
+    color: rgb(214, 194, 14);
 }
 .container{
     display: grid;
